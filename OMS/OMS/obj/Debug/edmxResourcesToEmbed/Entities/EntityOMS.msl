@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OMSModelStoreContainer" CdmEntityContainer="OMSEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="OMSModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerDemographics">
+      <EntityTypeMapping TypeName="OMSModel.CustomerDemographic">
+        <MappingFragment StoreEntitySet="CustomerDemographics">
+          <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+          <ScalarProperty Name="CustomerDesc" ColumnName="CustomerDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="OMSModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="OMSModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleOfCourtesy" ColumnName="TitleOfCourtesy" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="ReportsTo" ColumnName="ReportsTo" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Details">
+      <EntityTypeMapping TypeName="OMSModel.Order_Detail">
+        <MappingFragment StoreEntitySet="Order Details">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="OMSModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="ShipVia" ColumnName="ShipVia" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipRegion" ColumnName="ShipRegion" />
+          <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+          <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="OMSModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+          <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="OMSModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="RegionDescription" ColumnName="RegionDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shippers">
+      <EntityTypeMapping TypeName="OMSModel.Shipper">
+        <MappingFragment StoreEntitySet="Shippers">
+          <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="OMSModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="HomePage" ColumnName="HomePage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Territories">
+      <EntityTypeMapping TypeName="OMSModel.Territory">
+        <MappingFragment StoreEntitySet="Territories">
+          <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+          <ScalarProperty Name="TerritoryDescription" ColumnName="TerritoryDescription" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CustomerCustomerDemo" TypeName="OMSModel.CustomerCustomerDemo" StoreEntitySet="CustomerCustomerDemo">
+      <EndProperty Name="CustomerDemographics">
+        <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+      </EndProperty>
+      <EndProperty Name="Customers">
+        <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmployeeTerritories" TypeName="OMSModel.EmployeeTerritories" StoreEntitySet="EmployeeTerritories">
+      <EndProperty Name="Employees">
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </EndProperty>
+      <EndProperty Name="Territories">
+        <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Alphabetical_list_of_products">
+      <EntityTypeMapping TypeName="OMSModel.Alphabetical_list_of_product">
+        <MappingFragment StoreEntitySet="Alphabetical list of products">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
+          <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category_Sales_for_1997">
+      <EntityTypeMapping TypeName="OMSModel.Category_Sales_for_1997">
+        <MappingFragment StoreEntitySet="Category Sales for 1997">
+          <ScalarProperty Name="CategorySales" ColumnName="CategorySales" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Current_Product_Lists">
+      <EntityTypeMapping TypeName="OMSModel.Current_Product_List">
+        <MappingFragment StoreEntitySet="Current Product List">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_and_Suppliers_by_Cities">
+      <EntityTypeMapping TypeName="OMSModel.Customer_and_Suppliers_by_City">
+        <MappingFragment StoreEntitySet="Customer and Suppliers by City">
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="OMSModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoices">
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ShipperName" ColumnName="ShipperName" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Salesperson" ColumnName="Salesperson" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+          <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+          <ScalarProperty Name="ShipRegion" ColumnName="ShipRegion" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Details_Extendeds">
+      <EntityTypeMapping TypeName="OMSModel.Order_Details_Extended">
+        <MappingFragment StoreEntitySet="Order Details Extended">
+          <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_Subtotals">
+      <EntityTypeMapping TypeName="OMSModel.Order_Subtotal">
+        <MappingFragment StoreEntitySet="Order Subtotals">
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders_Qries">
+      <EntityTypeMapping TypeName="OMSModel.Orders_Qry">
+        <MappingFragment StoreEntitySet="Orders Qry">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+          <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+          <ScalarProperty Name="ShipRegion" ColumnName="ShipRegion" />
+          <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="ShipVia" ColumnName="ShipVia" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders_Views">
+      <EntityTypeMapping TypeName="OMSModel.Orders_View">
+        <MappingFragment StoreEntitySet="Orders View">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PriceTotal" ColumnName="PriceTotal" />
+          <ScalarProperty Name="ItemsTotal" ColumnName="ItemsTotal" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Sales_for_1997">
+      <EntityTypeMapping TypeName="OMSModel.Product_Sales_for_1997">
+        <MappingFragment StoreEntitySet="Product Sales for 1997">
+          <ScalarProperty Name="ProductSales" ColumnName="ProductSales" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_Above_Average_Prices">
+      <EntityTypeMapping TypeName="OMSModel.Products_Above_Average_Price">
+        <MappingFragment StoreEntitySet="Products Above Average Price">
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_by_Categories">
+      <EntityTypeMapping TypeName="OMSModel.Products_by_Category">
+        <MappingFragment StoreEntitySet="Products by Category">
+          <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+          <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+          <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales_by_Categories">
+      <EntityTypeMapping TypeName="OMSModel.Sales_by_Category">
+        <MappingFragment StoreEntitySet="Sales by Category">
+          <ScalarProperty Name="ProductSales" ColumnName="ProductSales" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales_Totals_by_Amounts">
+      <EntityTypeMapping TypeName="OMSModel.Sales_Totals_by_Amount">
+        <MappingFragment StoreEntitySet="Sales Totals by Amount">
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="SaleAmount" ColumnName="SaleAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Summary_of_Sales_by_Quarters">
+      <EntityTypeMapping TypeName="OMSModel.Summary_of_Sales_by_Quarter">
+        <MappingFragment StoreEntitySet="Summary of Sales by Quarter">
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Summary_of_Sales_by_Years">
+      <EntityTypeMapping TypeName="OMSModel.Summary_of_Sales_by_Year">
+        <MappingFragment StoreEntitySet="Summary of Sales by Year">
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CustOrderHist" FunctionName="OMSModel.Store.CustOrderHist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.CustOrderHist_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CustOrdersDetail" FunctionName="OMSModel.Store.CustOrdersDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.CustOrdersDetail_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CustOrdersOrders" FunctionName="OMSModel.Store.CustOrdersOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.CustOrdersOrders_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Employee_Sales_by_Country" FunctionName="OMSModel.Store.Employee_Sales_by_Country">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.Employee_Sales_by_Country_Result">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="SaleAmount" ColumnName="SaleAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sales_by_Year" FunctionName="OMSModel.Store.Sales_by_Year">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.Sales_by_Year_Result">
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SalesByCategory" FunctionName="OMSModel.Store.SalesByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.SalesByCategory_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="TotalPurchase" ColumnName="TotalPurchase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Ten_Most_Expensive_Products" FunctionName="OMSModel.Store.Ten_Most_Expensive_Products">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OMSModel.Ten_Most_Expensive_Products_Result">
+          <ScalarProperty Name="TenMostExpensiveProducts" ColumnName="TenMostExpensiveProducts" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

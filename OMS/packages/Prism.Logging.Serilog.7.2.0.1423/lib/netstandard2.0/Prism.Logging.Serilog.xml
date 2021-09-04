@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Prism.Logging.Serilog</name>
+    </assembly>
+    <members>
+        <member name="T:Prism.Ioc.IContainerRegistryExtensions">
+            <summary>
+            Extends <see cref="T:Prism.Ioc.IContainerRegistry" /> with methods to register
+            <see cref="T:Prism.Logging.Serilog.SerilogLoggerFacade" /> with Prism.
+            </summary>
+        </member>
+        <member name="M:Prism.Ioc.IContainerRegistryExtensions.RegisterSerilog(Prism.Ioc.IContainerRegistry)">
+            <summary>
+            Register a <see cref="T:Prism.Logging.Serilog.SerilogLoggerFacade" /> instance
+            with Prism, which will forward log messages from Prism to Serilog
+            </summary>
+            <param name="containerRegistry">Prism container registry</param>
+        </member>
+        <member name="M:Prism.Ioc.IContainerRegistryExtensions.RegisterSerilog(Prism.Ioc.IContainerRegistry,Serilog.ILogger,Prism.Logging.ILoggerFacade)">
+            <summary>
+            Register a <see cref="T:Prism.Logging.Serilog.SerilogLoggerFacade" /> instance
+            with Prism, which will forward log messages from Prism to Serilog
+            </summary>
+            <param name="containerRegistry">Prism container registry.</param>
+            <param name="logger">Serilog logger instance to forward the message to.</param>
+            <param name="next">(Optional) Prism logger façade instance to forward the message to.</param>
+        </member>
+        <member name="T:Prism.Logging.Serilog.SerilogLoggerFacade">
+            <summary>
+            Forwards logs from Prism to Serilog
+            </summary>
+        </member>
+        <member name="M:Prism.Logging.Serilog.SerilogLoggerFacade.#ctor">
+            <summary>
+            Construct a <see cref="T:Prism.Logging.Serilog.SerilogLoggerFacade" /> that
+            forwards logs to <see cref="T:Serilog.Log.Logger" />.
+            </summary>
+        </member>
+        <member name="M:Prism.Logging.Serilog.SerilogLoggerFacade.#ctor(Serilog.ILogger,Prism.Logging.ILoggerFacade)">
+            <summary>
+            Construct a <see cref="T:Prism.Logging.Serilog.SerilogLoggerFacade" /> that
+            that forwards logs to the <see cref="T:Serilog.ILogger" /> injected.
+            </summary>
+            <param name="logger">Serilog logger instance to forward the message to.</param>
+            <param name="next">(Optional) Prism logger façade instance to forward the message to.</param>
+        </member>
+        <member name="M:Prism.Logging.Serilog.SerilogLoggerFacade.Log(System.String,Prism.Logging.Category,Prism.Logging.Priority)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

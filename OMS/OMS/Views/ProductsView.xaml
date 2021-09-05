@@ -1,13 +1,14 @@
-﻿<UserControl x:Class="OMS.Views.HomeView"
+﻿<UserControl x:Class="OMS.Views.ProductsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:OMS.Views" 
+             xmlns:local="clr-namespace:OMS.Views"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              TextElement.FontWeight="Regular"
              TextElement.FontSize="13"
@@ -27,34 +28,13 @@
 
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal" Width="Auto">
-                <Label Content="From" VerticalAlignment="Center" FontWeight="Bold" Margin="20 0 10 0" FontSize="15"/>
-                <DatePicker Width="120" FontSize="15" SelectedDateFormat="Short" 
-                            SelectedDate="{Binding FromDate, Mode=TwoWay}">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="SelectedDateChanged">
-                            <prism:InvokeCommandAction Command="{Binding SelectedDateCommand}" TriggerParameterPath="AddedItems" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </DatePicker>
-
-                <Label Content="To" VerticalAlignment="Center" FontWeight="Bold" Margin="20 0 10 0" FontSize="15"/>
-                <DatePicker Name="ToDateCalendar"
-                            Width="120" FontSize="15" SelectedDateFormat="Short"
-                            SelectedDate="{Binding ToDate, Mode=TwoWay}">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="SelectedDateChanged">
-                            <prism:InvokeCommandAction Command="{Binding SelectedDateCommand}" TriggerParameterPath="AddedItems" />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                </DatePicker>
-
                 <materialDesign:ColorZone
                     Mode="Standard"
                     Width="300"
                     Padding="8 4 8 4"
                     CornerRadius="2"
                     Panel.ZIndex="1"
-                    Margin="50 0 0 0"
+                    Margin="30 0 0 0"
                     materialDesign:ShadowAssist.ShadowDepth="Depth1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Stretch">
@@ -69,7 +49,7 @@
                         <TextBox
                             Grid.Column="1"
                             Margin="8 0 0 0"
-                            materialDesign:HintAssist.Hint="ID or States (N, P, C, R)"
+                            materialDesign:HintAssist.Hint="ID or Name"
                             materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                             BorderThickness="0"
                             MinWidth="200"
@@ -78,20 +58,20 @@
                             Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="TextChanged">
-                                    <prism:InvokeCommandAction Command="{Binding SearchOrderCommand}"/>
+                                    <prism:InvokeCommandAction Command="{Binding SearchProductCommand}"/>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </TextBox>
                     </Grid>
                 </materialDesign:ColorZone>
             </StackPanel>
-            
+
             <Button
                 Style="{StaticResource MaterialDesignFloatingActionButton}"
                 ToolTip="Add new"
                 Width="50" Height="50" HorizontalAlignment="Right" Margin="10 10 20 10"
                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                Command="{Binding AddOrderCommand}">
+                Command="{Binding AddProductCommand}">
                 <materialDesign:PackIcon Kind="PlusThick" Height="20" Width="20" />
             </Button>
         </Grid>
@@ -99,43 +79,46 @@
         <Grid Grid.Row="1">
             <Separator></Separator>
         </Grid>
-        
+
         <Grid Grid.Row="2" Margin="5">
-            <ListView ItemsSource="{Binding OrdersListInAPage}" HorizontalAlignment="Center">
+            <ListView ItemsSource="{Binding ProductsListInAPage}" HorizontalAlignment="Center">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="{x:Type ListViewItem}">
                         <Setter Property="FontSize" Value="15"/>
                         <Setter Property="VerticalContentAlignment" Value="Center"/>
-                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
                         <Setter Property="VerticalAlignment" Value="Center"/>
                         <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Style.Triggers>
+                            <DataTrigger>
+                                <DataTrigger.Binding>
+                                    <Binding Path="Discontinued"/>
+                                </DataTrigger.Binding>
+                                <DataTrigger.Value>
+                                    <sys:Boolean>true</sys:Boolean>
+                                </DataTrigger.Value>
+                                <Setter Property="Background" Value="OrangeRed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
                     </Style>
                 </ListView.ItemContainerStyle>
-                
+
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="INDEX" HeaderContainerStyle="{StaticResource HeaderStyle}"
                                         DisplayMemberBinding="{Binding Path=Index}"/>
-                        <GridViewColumn Header="ORDER ID" HeaderContainerStyle="{StaticResource HeaderStyle}"
-                                        DisplayMemberBinding="{Binding Path=OrderID}"/>
-                        <GridViewColumn Header="ORDER DATE" HeaderContainerStyle="{StaticResource HeaderStyle}"
-                                        DisplayMemberBinding="{Binding Path=OrderDate, StringFormat={}{0:dd/MM/yyyy HH:mm:ss}}"/>
-                        <GridViewColumn Header="ITEMS" HeaderContainerStyle="{StaticResource HeaderStyle}"
-                                        DisplayMemberBinding="{Binding Path=ItemsTotal}"/>
-                        <GridViewColumn Header="TOTAL" HeaderContainerStyle="{StaticResource HeaderStyle}"
-                                        DisplayMemberBinding="{Binding Path=PriceTotal}"/>
-                        <GridViewColumn Header="STATE" HeaderContainerStyle="{StaticResource HeaderStyle}"
-                                        DisplayMemberBinding="{Binding Path=State}"/>
-                        <GridViewColumn Header="DETAILS" HeaderContainerStyle="{StaticResource HeaderStyle}">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Details" Width="100" Margin="10"
-                                            VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                            Command="{Binding Path=DataContext.ShowDetailsOrderViewCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
-                                            CommandParameter="{Binding}"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        <GridViewColumn Header="PRODUCT ID" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=ProductID}"/>
+                        <GridViewColumn Header="PRODUCT NAME" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=ProductName}"/>
+                        <GridViewColumn Header="CATEGORY" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=Category}"/>
+                        <GridViewColumn Header="UNIT PRICE" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=UnitPrice}"/>
+                        <GridViewColumn Header="UNITS IN STOCK" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=UnitsInStock}"/>
+                        <GridViewColumn Header="UNITS ON ORDER" HeaderContainerStyle="{StaticResource HeaderStyle}"
+                                        DisplayMemberBinding="{Binding Path=UnitsOnOrder}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -144,7 +127,7 @@
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="Auto" Margin="0 10 30 10">
                 <Label Content="Total: " FontSize="15" FontWeight="Bold" VerticalContentAlignment="Center"/>
-                <TextBlock Text="{Binding OrdersTotal}" VerticalAlignment="Center"
+                <TextBlock Text="{Binding ProductsTotal}" VerticalAlignment="Center"
                            TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto" Margin="0 10 0 10">
@@ -168,7 +151,7 @@
                              Width="Auto" VerticalAlignment="Center" Margin="0 2 0 0"
                              TextAlignment="Center" FontSize="15" FontWeight="Bold">
                         <TextBox.InputBindings>
-                            <KeyBinding Key="Enter" Command="{Binding CollectOrdersInEnterPageCommand}"/>
+                            <KeyBinding Key="Enter" Command="{Binding CollectProductsInEnterPageCommand}"/>
                         </TextBox.InputBindings>
                     </TextBox>
                     <TextBlock Text="OF" Margin="10 0 10 0" VerticalAlignment="Center" 
@@ -178,7 +161,7 @@
                     <TextBlock Text="PAGES" Margin="10 0 0 0" VerticalAlignment="Center" 
                                TextAlignment="Center" FontSize="15" FontWeight="Bold"/>
                 </StackPanel>
-                
+
                 <Button
                     Style="{StaticResource MaterialDesignIconButton}"
                     ToolTip="MaterialDesignIconButton"

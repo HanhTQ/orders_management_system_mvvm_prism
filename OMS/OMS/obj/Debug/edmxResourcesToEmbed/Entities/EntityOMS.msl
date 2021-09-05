@@ -434,5 +434,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="Products_Views">
+      <EntityTypeMapping TypeName="OMSModel.Products_View">
+        <MappingFragment StoreEntitySet="Products View">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+          <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
+          <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

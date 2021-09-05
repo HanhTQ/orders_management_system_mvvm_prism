@@ -45,8 +45,9 @@ namespace OMS
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<HomeView>();
-            containerRegistry.RegisterForNavigation<ItemsView>();
+            containerRegistry.RegisterForNavigation<ProductsView>();
             containerRegistry.RegisterForNavigation<AddOrderView>();
+            containerRegistry.RegisterForNavigation<AddProductView>();
             containerRegistry.RegisterForNavigation<DetailsOrderView>();
             _logger = new Logger();
             containerRegistry.RegisterInstance<ILogger>(_logger);

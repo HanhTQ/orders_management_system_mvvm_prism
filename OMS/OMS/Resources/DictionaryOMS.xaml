@@ -93,7 +93,7 @@
             <DataTrigger Binding="{Binding}" Value="Home">
                 <Setter TargetName="MenuItemIcon" Property="Kind" Value="Home"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding}" Value="Items">
+            <DataTrigger Binding="{Binding}" Value="Products">
                 <Setter TargetName="MenuItemIcon" Property="Kind" Value="FormatListCheckbox"/>
             </DataTrigger>
         </DataTemplate.Triggers>
@@ -101,7 +101,7 @@
 
     <x:Array x:Key="NavigationMenuItems" Type="system:String">
         <system:String>Home</system:String>
-        <system:String>Items</system:String>
+        <system:String>Products</system:String>
     </x:Array>
 
     <DataTemplate x:Key="CellTemplateInOrdersView">

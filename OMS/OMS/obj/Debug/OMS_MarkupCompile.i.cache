@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\App.xaml
-61462483365
+7418879817
 2-2144885192
-58941180809
+62-1074171046
 165-1591178240
-Resources\DictionaryOMS.xaml;Views\DetailsOrderView.xaml;Views\HomeView.xaml;Views\ItemsView.xaml;Views\MainWindow.xaml;Views\AddOrderView.xaml;
+Resources\DictionaryOMS.xaml;Views\AddProductView.xaml;Views\DetailsOrderView.xaml;Views\HomeView.xaml;Views\ProductsView.xaml;Views\MainWindow.xaml;Views\AddOrderView.xaml;
 
-False
+True
 

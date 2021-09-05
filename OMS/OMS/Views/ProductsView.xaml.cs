@@ -18,9 +18,9 @@ namespace OMS.Views
     /// <summary>
     /// Interaction logic for ItemsView.xaml
     /// </summary>
-    public partial class ItemsView : UserControl
+    public partial class ProductsView : UserControl
     {
-        public ItemsView()
+        public ProductsView()
         {
             InitializeComponent();
         }

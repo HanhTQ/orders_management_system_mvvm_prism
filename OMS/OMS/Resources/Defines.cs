@@ -18,10 +18,11 @@ namespace OMS.Resources
         public const string FILENAME_LOGS = "logs.txt";
 
         public const string HOME = "Home";
-        public const string ITEMS = "Items";
+        public const string PRODUCTS = "Products";
         public const string VIEW_HOME = "HomeView";
-        public const string VIEW_ITEMS = "ItemsView";
+        public const string VIEW_PRODUCTS = "ProductsView";
         public const string VIEW_ADD_ORDER = "AddOrderView";
+        public const string VIEW_ADD_PRODUCT = "AddProductView";
         public const string VIEW_DETAILS_ORDER = "DetailsOrderView";
 
         public const string MSGTYPE_WARNING = "WARNING";
@@ -32,6 +33,7 @@ namespace OMS.Resources
         public const string MSG_CHECKTODATE = "TO DATE is invalid!";
 
         public const int CONST_NUMBER_OF_ORDERS_IN_A_PAGE = 20;
+        public const int CONST_NUMBER_OF_PRODUCTS_IN_A_PAGE = 30;
         public const int CONST_NUMBER_OF_DAYS_COLLECT_ORDERS= 10;
 
         public const string STATE_ORDER_NEW = "New";

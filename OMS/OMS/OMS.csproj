@@ -280,6 +280,9 @@
     <Compile Include="Entities\Products_by_Category.cs">
       <DependentUpon>EntityOMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Products_View.cs">
+      <DependentUpon>EntityOMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Product_Sales_for_1997.cs">
       <DependentUpon>EntityOMS.tt</DependentUpon>
     </Compile>
@@ -319,17 +322,23 @@
     <Compile Include="Interface\ILogger.cs" />
     <Compile Include="Models\DataProvider.cs" />
     <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Resources\Defines.cs" />
     <Compile Include="Resources\Logger.cs" />
     <Compile Include="ViewModels\AddOrderViewModel.cs" />
+    <Compile Include="ViewModels\AddProductViewModel.cs" />
     <Compile Include="ViewModels\DetailsOrderViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
-    <Compile Include="ViewModels\ItemsViewModel.cs" />
+    <Compile Include="ViewModels\ProductsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\AddOrderView.xaml.cs">
       <DependentUpon>AddOrderView.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\DictionaryOMS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddProductView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -341,7 +350,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ItemsView.xaml">
+    <Page Include="Views\ProductsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,14 +362,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\AddProductView.xaml.cs">
+      <DependentUpon>AddProductView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DetailsOrderView.xaml.cs">
       <DependentUpon>DetailsOrderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ItemsView.xaml.cs">
-      <DependentUpon>ItemsView.xaml</DependentUpon>
+    <Compile Include="Views\ProductsView.xaml.cs">
+      <DependentUpon>ProductsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

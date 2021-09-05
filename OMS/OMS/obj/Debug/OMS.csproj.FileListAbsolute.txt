@@ -126,7 +126,6 @@ D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\bin\Debug\System.Threadin
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\bin\Debug\Unity.Abstractions.pdb
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\bin\Debug\Unity.Container.pdb
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\HomeView.g.cs
-D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\ItemsView.g.cs
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\MainWindow.g.cs
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\AddOrderView.g.cs
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\App.g.cs
@@ -136,7 +135,6 @@ D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\OMS_MarkupCompi
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\App.baml
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Resources\DictionaryOMS.baml
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\HomeView.baml
-D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\ItemsView.baml
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\MainWindow.baml
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\AddOrderView.baml
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\OMS.g.resources
@@ -149,3 +147,7 @@ D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\OMS.pdb
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\OMS.csproj.AssemblyReference.cache
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\DetailsOrderView.g.cs
 D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\DetailsOrderView.baml
+D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\AddProductView.g.cs
+D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\AddProductView.baml
+D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\ProductsView.g.cs
+D:\KuRE\GitHub\GitHub\orders_management_system\OMS\OMS\obj\Debug\Views\ProductsView.baml

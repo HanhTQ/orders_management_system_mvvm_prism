@@ -353,6 +353,31 @@ warning 6002: The table/view 'NORTHWND.dbo.Products by Category' does not have a
     <Property Name="Discontinued" Type="bit" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
+warning 6002: The table/view 'NORTHWND.dbo.Products View' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Products View">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Discontinued" />
+      <PropertyRef Name="CategoryName" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="UnitsInStock" Type="smallint" />
+    <Property Name="UnitsOnOrder" Type="smallint" />
+    <Property Name="Discontinued" Type="bit" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'NORTHWND.dbo.Quarterly Orders' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Quarterly Orders">
+          <Property Name="CustomerID" Type="nchar" MaxLength="5" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="40" />
+          <Property Name="City" Type="nvarchar" MaxLength="15" />
+          <Property Name="Country" Type="nvarchar" MaxLength="15" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'NORTHWND.dbo.Sales by Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Sales by Category">
     <Key>
@@ -725,6 +750,17 @@ warning 6002: The table/view 'NORTHWND.dbo.Summary of Sales by Year' does not ha
     [Products by Category].[UnitsInStock] AS [UnitsInStock], 
     [Products by Category].[Discontinued] AS [Discontinued]
     FROM [dbo].[Products by Category] AS [Products by Category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Products View" EntityType="Self.Products View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Products View].[ProductID] AS [ProductID], 
+    [Products View].[ProductName] AS [ProductName], 
+    [Products View].[UnitPrice] AS [UnitPrice], 
+    [Products View].[UnitsInStock] AS [UnitsInStock], 
+    [Products View].[UnitsOnOrder] AS [UnitsOnOrder], 
+    [Products View].[Discontinued] AS [Discontinued], 
+    [Products View].[CategoryName] AS [CategoryName]
+    FROM [dbo].[Products View] AS [Products View]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Sales by Category" EntityType="Self.Sales by Category" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

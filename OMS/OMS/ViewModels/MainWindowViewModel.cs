@@ -65,8 +65,8 @@ namespace OMS.ViewModels
                     case Defines.HOME:
                         NavigateCommand.Execute(Defines.VIEW_HOME);
                         break;
-                    case Defines.ITEMS:
-                        NavigateCommand.Execute(Defines.VIEW_ITEMS);
+                    case Defines.PRODUCTS:
+                        NavigateCommand.Execute(Defines.VIEW_PRODUCTS);
                         break;
                     default:
                         break;

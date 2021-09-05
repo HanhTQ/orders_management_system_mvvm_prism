@@ -140,8 +140,8 @@ namespace OMS.ViewModels
         {
             _regionManager = regionManager;
             _logger = logger;
+            OrdersListInAPage = new ObservableCollection<OrderModel>();
             _allOrdersViewList = new List<Orders_View>();
-            _ordersListInAPage = new ObservableCollection<OrderModel>();
 
             AddOrderCommand = new DelegateCommand(AddOrder);
             SelectedDateCommand = new DelegateCommand(CollectOrdersFromDateToDate);

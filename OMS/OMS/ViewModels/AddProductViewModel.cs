@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OMS.ViewModels
 {
-    public class ItemsViewModel
+    public class AddProductViewModel
     {
     }
 }
